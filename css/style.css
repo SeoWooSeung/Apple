@@ -1,0 +1,380 @@
+* {
+    outline: 1px solid tomato-;
+}
+
+.inner {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.tit {
+    text-align: left;
+}
+
+.tit h2 {
+    font-size: 48px;
+    font-weight: 700;
+
+    margin: 0 0 8px 0;
+}
+
+.tit span {
+    display: block;
+    font-size: 22px;
+    font-weight: 500;
+
+    margin: 0 0 40px 0;
+}
+
+.wrap {
+    min-width: 1200px;
+}
+
+/* 헤더영역 */
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    background: #f9f9f9;
+    filter: blur(0.5);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.header h1 {
+    margin: 0 0 0 50px;
+    width: 30px;
+    height: 100%;
+    margin: -4px 0 0 0;
+}
+
+.header .header_wrap {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 15px;
+
+    line-height: 60px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .gnb ul {
+    display: flex;
+    gap: 48px;
+}
+
+/* .header .gnb ul li:hover a {
+    text-decoration: underline;
+} */
+
+
+.header .gnb ul li a {
+    color: #000;
+
+    font-size: 14px;
+    font-weight: 500;
+    display: block;
+}
+
+.header .icon {
+    display: flex;
+    gap: 20px;
+}
+
+.header .icon .con {
+    margin: -4px 0 0 0;
+
+    color: #000;
+    font-size: 24px;
+    font-weight: 300;
+
+    vertical-align: middle;
+}
+
+/* 섹션 1 */
+
+.MainVisual {
+    position: relative;
+    height: 60vh;
+    background: #000;
+}
+
+.MainVisual .itm {
+    position: relative;
+    height: 60vh;
+    background: url(../images/titanium__dpzwrhj26dm6_medium.jpg)no-repeat 800px 100px;
+}
+
+.MainVisual .itm::before {
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 100%;
+    background: linear-gradient(to right, transparent, #000);
+    top: 0;
+    right: 9%;
+}
+
+.MainVisual .slg {
+    position: absolute;
+    top: 50%;
+    left: 28%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    z-index: 1000;
+
+    text-align: left;
+}
+
+.MainVisual .slg h2 {
+    font-size: 80px;
+    font-weight: 600;
+    letter-spacing: -1px;
+
+    margin: 0 0 24px 0;
+}
+
+.MainVisual .slg span {
+    font-size: 22px;
+}
+
+.MainVisual .slg .btn {
+    margin: 0 0 16px 0;
+}
+
+.MainVisual .slg .btn a {
+    display: inline-block;
+    margin: 60px 0 0 0;
+    font-size: 14px;
+}
+
+.MainVisual .slg .btn a i {
+    font-size: 12px;
+}
+
+/* 섹션 2 */
+
+.Main_Promo {
+    padding: 120px 0;
+}
+
+.Main_Promo .promo_box {
+    display: flex;
+    gap: 30px;
+}
+
+.Main_Promo .promo_box>* {
+    flex: 1;
+}
+
+.Main_Promo .promo_box figure {
+    position: relative;
+    box-shadow: 2px 4px 12px rgba(0, 0, 0, .09);
+    border-radius: 20px;
+
+    overflow: hidden;
+}
+
+.Main_Promo .promo_box figure img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+.Main_Promo .promo_box figure img:hover {
+    scale: 1.05;
+    transition: 0.5s;
+}
+
+/* 사진설명 */
+
+.Main_Promo .promo_box .txt {
+    position: absolute;
+    top: 24%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.Main_Promo .promo_box .mm {
+    color: #fff;
+}
+
+.Main_Promo .promo_box .txt strong {
+    display: block;
+    font-size: 32px;
+    font-weight: 700;
+    margin: 0 0 12px 0;
+}
+
+.Main_Promo .promo_box .txt p {
+    white-space: nowrap;
+    margin: 0 0 6px 0;
+}
+
+.Main_Promo .promo_box .txt span {
+    display: block;
+    margin: 0 0 28px 0;
+}
+
+.Main_Promo .promo_box .txt a {
+    font-size: 14px;
+    display: block;
+}
+
+.Main_Promo .promo_box .txt a:hover {
+    text-decoration: underline;
+}
+
+.Main_Promo .promo_box .txt a i {
+    font-size: 12px;
+    color: #838282;
+}
+
+/* 섹션 3 */
+
+.banner {
+    padding: 0 0;
+}
+
+.banner .img_box {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.banner .img_box .itm {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    border-bottom: 1px solid #ddd;
+
+    /* border-radius: 20px; */
+    /* box-shadow: 4px 2px 12px rgba(0, 0, 0, 0.09); */
+}
+
+.banner .img_box .itm01 {
+    background: url(../images/banner_01.jpg)no-repeat center bottom/cover;
+}
+
+.banner .img_box .txt {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    text-align: center;
+    color: #fff;
+}
+
+.banner .img_box .txt strong {
+    display: block;
+    font-size: 48px;
+    font-weight: 600;
+    margin: 0 0 8px 0;
+
+    letter-spacing: -1.5px;
+}
+
+.banner .img_box .txt span {
+    display: block;
+    font-size: 32px;
+    font-weight: 400;
+
+    margin: 0 0 28px 0;
+    letter-spacing: -1px;
+}
+
+.banner .img_box .txt a {
+    letter-spacing: 0.5px;
+}
+
+.banner .img_box .txt a i {
+    font-size: 12px;
+}
+
+/* 섹션 4 */
+
+.info {
+    padding: 120px 0;
+}
+
+.info .inner .img_box {
+    display: flex;
+    flex-direction: column;
+
+    gap: 30px;
+}
+
+.info .inner .img_box figure {
+    position: relative;
+}
+
+.info .inner img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+
+    border-radius: 20px;
+    box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.09);
+}
+
+.info .inner .img_box .txt {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    text-align: center;
+}
+
+.info .inner .img_box .txt strong {
+    display: block;
+    font-size: 48px;
+    font-weight: 500;
+
+    margin: 0 0 16px 0;
+}
+
+.info .inner .img_box .txt span {
+    display: inline-block;
+    margin: 0 0 32px 0;
+}
+
+.info .inner .img_box .txt a {
+    display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.main {
+    height: 300vh;
+}
