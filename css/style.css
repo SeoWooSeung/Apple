@@ -27,6 +27,16 @@
     margin: 0 0 40px 0;
 }
 
+/* 
+.btn a i {
+    border: 1px solid #666;
+    border-radius: 50%;
+
+    padding: 2px;
+    margin: 0 0 0 4px;
+    font-size: 12px;
+} */
+
 .wrap {
     min-width: 1200px;
 }
@@ -122,25 +132,25 @@
 
 .MainVisual .slg {
     position: absolute;
-    top: 50%;
+    top: 60%;
     left: 28%;
     transform: translate(-50%, -50%);
     color: #fff;
-    z-index: 1000;
+    z-index: 1;
 
     text-align: left;
 }
 
 .MainVisual .slg h2 {
     font-size: 80px;
-    font-weight: 600;
+    font-weight: 500;
     letter-spacing: -1px;
 
     margin: 0 0 24px 0;
 }
 
 .MainVisual .slg span {
-    font-size: 22px;
+    font-size: 24px;
 }
 
 .MainVisual .slg .btn {
@@ -149,11 +159,16 @@
 
 .MainVisual .slg .btn a {
     display: inline-block;
-    margin: 60px 0 0 0;
-    font-size: 14px;
+    margin: 80px 36px 0 0;
+    font-size: 16px;
 }
 
 .MainVisual .slg .btn a i {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+
+    padding: 2px;
+    margin: 0 0 0 4px;
     font-size: 12px;
 }
 
@@ -176,6 +191,9 @@
     position: relative;
     box-shadow: 2px 4px 12px rgba(0, 0, 0, .09);
     border-radius: 20px;
+
+    height: 100%;
+    width: 100%;
 
     overflow: hidden;
 }
@@ -239,9 +257,9 @@
 
 /* 섹션 3 */
 
-.banner {
+/* .banner {
     padding: 0 0;
-}
+} */
 
 .banner .img_box {
     display: flex;
@@ -252,11 +270,11 @@
 .banner .img_box .itm {
     position: relative;
     width: 100%;
-    height: 500px;
-    border-bottom: 1px solid #ddd;
+    height: 700px;
+    /* border-bottom: 1px solid #ddd; */
 
     /* border-radius: 20px; */
-    /* box-shadow: 4px 2px 12px rgba(0, 0, 0, 0.09); */
+    box-shadow: 4px 2px 120px rgba(0, 0, 0, 0.09);
 }
 
 .banner .img_box .itm01 {
@@ -287,7 +305,7 @@
     font-size: 32px;
     font-weight: 400;
 
-    margin: 0 0 28px 0;
+    margin: 0 0 32px 0;
     letter-spacing: -1px;
 }
 
@@ -296,7 +314,9 @@
 }
 
 .banner .img_box .txt a i {
-    font-size: 12px;
+    margin: 0 0 0 2px;
+
+    font-size: 14px;
 }
 
 /* 섹션 4 */
@@ -312,7 +332,7 @@
     gap: 30px;
 }
 
-.info .inner .img_box figure {
+.info .inner .img_box .top_box {
     position: relative;
 }
 
@@ -322,10 +342,63 @@
     object-fit: cover;
 
     border-radius: 20px;
-    box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.09);
+    box-shadow: 2px 4px 18px rgba(0, 0, 0, 0.1);
 }
 
-.info .inner .img_box .txt {
+.info .inner .img_box .txt_01 {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    text-align: center;
+}
+
+.info .inner .img_box .txt_01 strong {
+    display: block;
+    font-size: 48px;
+    font-weight: 500;
+
+    margin: 0 0 16px 0;
+}
+
+.info .inner .img_box .txt_01 span {
+    display: inline-block;
+    font-size: 18px;
+    margin: 0 0 32px 0;
+}
+
+.info .inner .img_box .txt_01 a {
+    display: block;
+}
+
+.info .inner .img_box .txt_01 a i {
+    font-size: 12px;
+    margin: 0 0 0 2px;
+
+    color: #000;
+}
+
+/* 바텀박스 */
+
+.info .inner .img_box .bt_box .lf_box {
+    color: #fff;
+}
+
+.info .inner .img_box .bt_box {
+    display: flex;
+    gap: 30px;
+}
+
+.info .inner .img_box .bt_box>* {
+    flex: 1;
+}
+
+.info .inner .img_box .bt_box .con {
+    position: relative;
+}
+
+.info .inner .img_box .bt_box .desc {
     position: absolute;
     top: 20%;
     left: 50%;
@@ -334,7 +407,7 @@
     text-align: center;
 }
 
-.info .inner .img_box .txt strong {
+.info .inner .img_box .bt_box .desc strong {
     display: block;
     font-size: 48px;
     font-weight: 500;
@@ -342,39 +415,54 @@
     margin: 0 0 16px 0;
 }
 
-.info .inner .img_box .txt span {
+.info .inner .img_box .bt_box .desc span {
     display: inline-block;
+    font-size: 18px;
     margin: 0 0 32px 0;
 }
 
-.info .inner .img_box .txt a {
+.info .inner .img_box .bt_box .desc a {
+    font-size: 14px;
     display: block;
 }
 
+.info .inner .img_box .bt_box .desc a i {
+    font-size: 14px;
+    margin: 0 0 0 2px;
 
+    color: #666;
+}
 
+/* 푸터 */
 
+.footer {
+    padding: 80px 0 80px 0;
+    background: #000;
 
+    border-top: 1px solid #ddd;
+}
 
+.footer .footer_wrap .t_ft {
+    display: flex;
+    gap: 30px;
 
+    color: #fff;
+    font-size: 14px;
 
+    margin: 0 0 18px 0;
+}
 
+.footer .footer_wrap .b_tt {
+    display: flex;
+    gap: 30px;
 
+    color: #fff;
+    font-size: 12px;
 
+    margin: 0 0 48px 0;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-.main {
-    height: 300vh;
+.footer .footer_wrap .copy {
+    font-size: 12px;
+    color: #666;
 }
