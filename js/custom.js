@@ -32,8 +32,8 @@ $(function () {
     if ($(".itm").hasClass("on")) e.preventDefault();
   });
 
-  $(".mopen").on("click", function () {
+  $(".mbtn").on("click", function () {
     $(".header").toggleClass("active");
-    // $(".icon").toggleClass("on");
+    $(".gnb").toggleClass("on");
   });
 });

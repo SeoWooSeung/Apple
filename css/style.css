@@ -106,6 +106,109 @@
     vertical-align: middle;
 }
 
+.header .mbtn {
+    display: none;
+}
+
+
+@media (max-width:768px) {
+    .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 999;
+        background: #f9f9f9;
+        filter: blur(0.5);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    }
+
+    .header h1 {
+        margin: 0 0 0 50px;
+        width: 50px;
+        height: 100%;
+        margin: -4px 0 0 0;
+    }
+
+    .header.active h1 img {
+        width: 50px;
+        height: 50px;
+        margin: 12px 0 0 0;
+        position: fixed;
+        z-index: 1200;
+    }
+
+    .header .header_wrap {
+        max-width: 1240px;
+        margin: 0 auto;
+        padding: 0 15px;
+
+        line-height: 80px;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .header .gnb {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: calc(100% - 120px);
+        height: 100vh;
+        background: #f9f9f9;
+        padding: 150px 24px 0 24px;
+        transition: left 0.5s;
+    }
+
+    .header .gnb.on {
+        left: 0;
+    }
+
+    .header .gnb ul {
+        display: flex;
+        /* gap: 48px; */
+
+        white-space: nowrap;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .header .gnb ul li a {
+        line-height: 20px;
+        color: #000;
+
+        font-size: 16px;
+        font-weight: 500;
+        display: block;
+
+        border-bottom: 1px solid #ddd;
+    }
+
+    .header .icon .con {
+        display: none;
+    }
+
+    .header .mbtn {
+        display: block;
+        border: none;
+        background: transparent;
+    }
+
+    .header .mbtn i {
+        position: fixed;
+        top: 24px;
+        right: 16px;
+        z-index: 1000;
+        color: #ffffff;
+        background: #444;
+        padding: 10px;
+        box-sizing: content-box;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+}
+
 /* 섹션 1 */
 
 .MainVisual {
@@ -132,7 +235,7 @@
 
 .MainVisual .slg {
     position: absolute;
-    top: 60%;
+    top: 55%;
     left: 28%;
     transform: translate(-50%, -50%);
     color: #fff;
@@ -170,6 +273,72 @@
     padding: 2px;
     margin: 0 0 0 4px;
     font-size: 12px;
+}
+
+@media (max-width:768px) {
+    .MainVisual {
+        position: relative;
+        height: 60vh;
+        background: #000;
+    }
+
+    .MainVisual .itm {
+        position: relative;
+        height: 60vh;
+        background: url(../images/titanium__dpzwrhj26dm6_medium.jpg)no-repeat left center;
+    }
+
+    .MainVisual .itm::before {
+        content: "";
+        position: absolute;
+        width: 500px;
+        height: 100%;
+        background: linear-gradient(to right, transparent, #000);
+        top: 0;
+        right: 35%;
+    }
+
+    .MainVisual .slg {
+        position: absolute;
+        top: 60%;
+        left: 18%;
+        transform: translate(-50%, -50%);
+        color: #fff;
+        z-index: 1;
+
+        text-align: left;
+    }
+
+    .MainVisual .slg h2 {
+        font-size: 12vw;
+        font-weight: 500;
+        letter-spacing: -1px;
+
+        margin: 0 0 24px 0;
+    }
+
+    .MainVisual .slg span {
+        font-size: 5vw;
+    }
+
+    .MainVisual .slg .btn {
+        margin: 0 0 16px 0;
+    }
+
+    .MainVisual .slg .btn a {
+        display: inline-block;
+        margin: 80px 36px 0 0;
+        font-size: 16px;
+    }
+
+    .MainVisual .slg .btn a i {
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 50%;
+
+        padding: 2px;
+        margin: 0 0 0 4px;
+        font-size: 12px;
+    }
 }
 
 /* 섹션 2 */
@@ -246,20 +415,97 @@
     display: block;
 }
 
-.Main_Promo .promo_box .txt a:hover {
-    text-decoration: underline;
-}
-
 .Main_Promo .promo_box .txt a i {
     font-size: 12px;
     color: #838282;
 }
 
-/* 섹션 3 */
+@media (max-width:768px) {
+    .Main_Promo {
+        padding: 120px 0;
+    }
 
-/* .banner {
-    padding: 0 0;
-} */
+    .Main_Promo .promo_box {
+        display: flex;
+        gap: 60px;
+
+        flex-direction: column;
+    }
+
+    .Main_Promo .promo_box>* {
+        flex: 1;
+    }
+
+    .Main_Promo .promo_box figure {
+        position: relative;
+        box-shadow: 2px 4px 12px rgba(0, 0, 0, .09);
+        border-radius: 20px;
+
+        width: 450px;
+        height: 20px;
+
+        overflow: hidden;
+    }
+
+    .Main_Promo .promo_box figure img {
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
+        transition: 0.5s;
+    }
+
+    .Main_Promo .promo_box figure img:hover {
+        scale: 1.05;
+        transition: 0.5s;
+    }
+
+    /* 사진설명 */
+
+    .Main_Promo .promo_box .txt {
+        position: absolute;
+        top: 24%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+
+    .Main_Promo .promo_box .mm {
+        color: #fff;
+    }
+
+    .Main_Promo .promo_box .txt strong {
+        display: block;
+        font-size: 32px;
+        font-weight: 700;
+        margin: 0 0 12px 0;
+    }
+
+    .Main_Promo .promo_box .txt p {
+        white-space: nowrap;
+        margin: 0 0 6px 0;
+    }
+
+    .Main_Promo .promo_box .txt span {
+        display: block;
+        margin: 0 0 28px 0;
+    }
+
+    .Main_Promo .promo_box .txt a {
+        font-size: 14px;
+        display: block;
+    }
+
+    .Main_Promo .promo_box .txt a:hover {
+        text-decoration: underline;
+    }
+
+    .Main_Promo .promo_box .txt a i {
+        font-size: 12px;
+        color: #838282;
+    }
+}
+
+/* 섹션 3 */
 
 .banner .img_box {
     display: flex;
@@ -319,6 +565,67 @@
     font-size: 14px;
 }
 
+@media (max-width:768px) {
+    .banner .img_box {
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .banner .img_box .itm {
+        position: relative;
+        width: 500px;
+        height: 700px;
+
+        box-shadow: 4px 2px 120px rgba(0, 0, 0, 0.09);
+    }
+
+    .banner .img_box .itm01 {
+        background: url(../images/banner_01.jpg)no-repeat center center/cover;
+    }
+
+    .banner .img_box .txt {
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        text-align: center;
+        color: #fff;
+    }
+
+    .banner .img_box .txt strong {
+        display: block;
+        font-size: 8vw;
+        font-weight: 600;
+        margin: 0 0 16px 0;
+
+        letter-spacing: -1.5px;
+    }
+
+    .banner .img_box .txt span {
+        display: block;
+        font-size: 4vw;
+        font-weight: 400;
+
+        margin: 0 0 32px 0;
+        letter-spacing: -1px;
+
+        white-space: nowrap;
+    }
+
+    .banner .img_box .txt a {
+        letter-spacing: 0.5px;
+    }
+
+    .banner .img_box .txt a i {
+        margin: 0 0 0 2px;
+
+        font-size: 14px;
+    }
+}
+
 /* 섹션 4 */
 
 .info {
@@ -342,7 +649,7 @@
     object-fit: cover;
 
     border-radius: 20px;
-    box-shadow: 2px 4px 18px rgba(0, 0, 0, 0.1);
+    box-shadow: 2px 14px 18px rgba(0, 0, 0, 0.1);
 }
 
 .info .inner .img_box .txt_01 {
@@ -433,9 +740,126 @@
     color: #666;
 }
 
+@media (max-width:768px) {
+    .info {
+        padding: 120px 0;
+    }
+
+    .info .inner .img_box {
+        display: flex;
+        flex-direction: column;
+
+        gap: 60px;
+    }
+
+    .info .inner .img_box .top_box {
+        position: relative;
+    }
+
+    .info .inner img {
+        width: 450px;
+        height: 500px;
+        object-fit: cover;
+
+        border-radius: 20px;
+        box-shadow: 2px 4px 18px rgba(0, 0, 0, 0.1);
+    }
+
+    .info .inner .img_box .txt_01 {
+        position: absolute;
+        top: 25%;
+        left: 20%;
+        transform: translate(-50%, -50%);
+
+        text-align: center;
+    }
+
+    .info .inner .img_box .txt_01 strong {
+        display: block;
+        font-size: 48px;
+        font-weight: 500;
+
+        margin: 0 0 16px 0;
+    }
+
+    .info .inner .img_box .txt_01 span {
+        display: inline-block;
+        font-size: 18px;
+        margin: 0 0 32px 0;
+    }
+
+    .info .inner .img_box .txt_01 a {
+        display: block;
+    }
+
+    .info .inner .img_box .txt_01 a i {
+        font-size: 12px;
+        margin: 0 0 0 2px;
+
+        color: #000;
+    }
+
+    /* 바텀박스 */
+
+    .info .inner .img_box .bt_box .lf_box {
+        color: #fff;
+    }
+
+    .info .inner .img_box .bt_box {
+        display: flex;
+        gap: 60px;
+
+        flex-direction: column;
+    }
+
+    .info .inner .img_box .bt_box>* {
+        flex: 1;
+    }
+
+    .info .inner .img_box .bt_box .con {
+        position: relative;
+    }
+
+    .info .inner .img_box .bt_box .desc {
+        position: absolute;
+        top: 20%;
+        left: 20%;
+        transform: translate(-50%, -50%);
+
+        text-align: center;
+    }
+
+    .info .inner .img_box .bt_box .desc strong {
+        display: block;
+        font-size: 48px;
+        font-weight: 500;
+
+        margin: 0 0 16px 0;
+    }
+
+    .info .inner .img_box .bt_box .desc span {
+        display: inline-block;
+        font-size: 18px;
+        margin: 0 0 32px 0;
+    }
+
+    .info .inner .img_box .bt_box .desc a {
+        font-size: 14px;
+        display: block;
+    }
+
+    .info .inner .img_box .bt_box .desc a i {
+        font-size: 14px;
+        margin: 0 0 0 2px;
+
+        color: #666;
+    }
+}
+
 /* 푸터 */
 
 .footer {
+    overflow: hidden;
     padding: 80px 0 80px 0;
     background: #000;
 
@@ -465,4 +889,44 @@
 .footer .footer_wrap .copy {
     font-size: 12px;
     color: #666;
+}
+
+@media (max-width:768px) {
+    .footer {
+        padding: 80px 0 80px 0;
+        background: #000;
+
+        border-top: 1px solid #ddd;
+    }
+
+    .footer .footer_wrap .t_ft {
+        display: flex;
+        gap: 30px;
+
+        color: #fff;
+        font-size: 14px;
+
+        margin: 0 0 60px 0;
+
+        /*  */
+        flex-direction: column;
+        text-align: left;
+    }
+
+    .footer .footer_wrap .b_tt {
+        display: flex;
+        gap: 30px;
+
+        color: #fff;
+        font-size: 12px;
+
+        margin: 0 0 48px 0;
+
+        flex-direction: column;
+    }
+
+    .footer .footer_wrap .copy {
+        font-size: 12px;
+        color: #666;
+    }
 }
